@@ -1,6 +1,6 @@
 {
   "name": "blank-html5",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Blank HTML5 template. Forked from @hj_chen",
   "main": "gulpfile.js",
   "scripts": {
@@ -22,3 +22,4 @@
     "url": "https://github.com/nplayfair/blank-html5.git"
   }
 }
+
