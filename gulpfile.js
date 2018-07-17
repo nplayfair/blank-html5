@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
-var cssnano     = require('cssnano');
+var cssnano     = require('gulp-cssnano');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 
@@ -37,10 +37,8 @@ gulp.task('sass-prod', function () {
     onError: browserSync.notify
   }))
   .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-  .pipe(cssnano({
-        safe: true //safe optimisations
-   }))
-  .pipe(gulp.dest('css'))
+  .pipe(cssnano()
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({stream:true}))
 });
 
